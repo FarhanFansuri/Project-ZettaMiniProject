@@ -1,0 +1,58 @@
+<div class="container">
+  <button class="btn btn-dark my-4" *ngIf="checkout" (click)="checkOut()">CHECKOUT</button>
+  <div style="display:flex;justify-content:center;" *ngIf="!checkout">
+    <img src="../../../assets/img/background/cart.png" style="width:40%">
+  </div>
+  <h1 class="fs-1 text-center no-item" *ngIf="!checkout">Anda belum memasukan apa-apa dalam Keranjang!!</h1>
+</div>
+<div class="card mt-5 mb-5" *ngFor="let data of data">
+  <div class="row">
+      <div class="col-md-8 cart">
+          <div class="title">
+              <div class="row">
+                  <div class="col"><h4><b>Shopping Cart</b></h4></div>
+
+              </div>
+          </div>
+          <div class="row border-top border-bottom">
+              <div class="row main align-items-center">
+
+                  <div class="col">
+                      <div class="row text-muted">Food</div>
+                      <div class="row">{{getRecipeName(data.recipe_id)}}</div>
+                  </div>
+                  <div class="col">
+                    <button (click)="sub(data.recipe_id)">-</button><a href="#" class="border">{{data.amount}}</a><button (click)="add(data.recipe_id)">+</button>
+                  </div>
+                  <div class="col">{{getRecipePrice(data.recipe_id)}}</div>
+              </div>
+          </div>
+          <br>
+          <p><b>Note : </b> {{data.note}}</p>
+          <div class="back-to-shop"><a routerLink="/menu">&leftarrow;</a><span class="text-muted">Back to shop</span></div>
+      </div>
+
+      <div class="col-md-4 summary">
+          <div><h5><b>Summary</b></h5></div>
+          <hr>
+          <div class="row">
+              <div class="col" style="padding-left:0;">ITEMS {{data.amount}}</div>
+              <div class="col text-right">{{getRecipePrice(data.recipe_id)}}</div>
+          </div>
+          <form>
+              <p>NOTE</p>
+              <input id="code" input="text" [(ngModel)]="data.note" [ngModelOptions]="{standalone: true}" placeholder="Tambah Catatan">
+          </form>
+          <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+              <div class="col">TOTAL PRICE</div>
+              <div class="col text-right">{{getRecipePrice(data.recipe_id)*data.amount}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<br><br><br><br><br>
+<footer>
+</footer>

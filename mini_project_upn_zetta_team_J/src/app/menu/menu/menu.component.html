@@ -1,0 +1,21 @@
+<div class="container">
+  <img id="first-img" src="../../../assets/img/background/food.jpeg">
+</div>
+<h1 class="fs-1 text-center my-5 geor"><b>Our Menu</b></h1>
+<div style="display:flex; justify-content:center">
+<div class=" container row mt-5" >
+  <div class="col-3" *ngFor="let element of data">
+    <div class="card" style="width: 18rem;">
+      <img src={{element.image}} class="card-img-top front-img" alt="...">
+      <div class="card-body">
+        <h1 class="card-title">{{element.recipe_name}}</h1>
+        <p class="card-text mb-3" style="text-align:justify">Makanan yang kami sajikan telah dijamin kebersihanya mulai dari pembelian bahan makanan hingga penyajian</p>
+        <button class="btn btn-danger text-white" (click)="addToCart(element.id)">Tambahkan Keranjang</button>
+      </div>
+    </div>
+      <br>
+
+  </div>
+
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container p-5">
+
+  <h1 class="text-center  my-5 text-trans" ><b>Transaction</b></h1>
+  <a class="btn btn-danger" href="/transaction">Update Data</a>
+  <div class="row">
+    <div class="col-6" *ngFor="let datax of data" >
+      <div class="card my-5" >
+        <div class="card-header bg-primary text-white" >
+          <p class="fs-4">Pembelian Sukses</p>
+        </div>
+        <div class="card-body">
+          <h1 class="card-title"><b>{{datax.menu[0].recipe_id.recipe_name}}</b></h1>
+          <p class="card-text"><b>Note</b> : {{datax.menu[0].note}}</p>
+          <p class="card-text"><b>Total</b> : {{datax.total_price}}</p>
+          <p class="card-text"><b>Amount : </b>{{datax.menu[0].amount}}</p>
+          <p class="card-text"><b>Order date</b> : {{datax.order_date}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

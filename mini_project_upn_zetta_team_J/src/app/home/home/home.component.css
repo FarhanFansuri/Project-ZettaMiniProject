@@ -1,0 +1,77 @@
+.prom {
+  width: 30vw;
+  border-radius: 20px;
+}
+
+.big-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
+
+.kotak {
+  opacity: var(4%);
+  background-image: url('../../../assets/img/background/resto.jpg');
+  background-size: cover;
+  height: 500px;
+  border-radius: 20px;
+
+}
+
+#food {
+  margin-top: 7vh;
+  margin-left: 7%;
+  width: 400px;
+  border-radius: 20px;
+}
+
+.klik-info {
+  padding: 1% 4% 1% 4%;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#info-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.klik-contact {
+  padding: 1% 4% 1% 4%;
+  background-color: rgb(221, 234, 237);
+  color: rgb(7, 13, 18);
+  margin-left: 4%;
+}
+
+
+p {
+  text-align: justify;
+}
+
+.coupon {
+  border: 5px #bbb;
+  /* Dotted border */
+  width: 80%;
+  border-radius: 15px;
+  /* Rounded border */
+  margin: 0 auto;
+  /* Center the coupon */
+  max-width: 600px;
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.promo {
+  background: #ccc;
+  padding: 3px;
+}
+
+.expire {
+  color: red;
+}
